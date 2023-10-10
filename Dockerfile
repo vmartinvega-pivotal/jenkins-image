@@ -1,5 +1,8 @@
 FROM jenkins/jenkins:latest
 
+# Prometheus integration
+RUN jenkins-plugin-cli --plugins prometheus:2.3.3
+
 # Distributed Builds plugins
 RUN jenkins-plugin-cli --plugins ssh-slaves
 
